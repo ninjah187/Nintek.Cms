@@ -1,0 +1,43 @@
+branches:
+  - release/cms
+  - release/admin-panel
+  - release/asp-net-core
+  - release/autofac
+  - release/users
+language: csharp
+solution: Nintek.Cms.sln
+mono: none
+dotnet: 2.0.0
+dist: trusty
+script:
+  - if [ "$TRAVIS_BRANCH" = "release/cms" ]; then dotnet pack --configuration Release Nintek.Cms; fi
+  - if [ "$TRAVIS_BRANCH" = "release/admin-panel" ]; then dotnet pack --configuration Release Nintek.Cms.AdminPanel; fi
+  - if [ "$TRAVIS_BRANCH" = "release/asp-net-core" ]; then dotnet pack --configuration Release Nintek.Cms.AspNetCore; fi
+  - if [ "$TRAVIS_BRANCH" = "release/autofac" ]; then dotnet pack --configuration Release Nintek.Cms.Autofac; fi
+  - if [ "$TRAVIS_BRANCH" = "release/users" ]; then dotnet pack --configuration Release Nintek.Cms.Users; fi
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: dotnet nuget push Nintek.Cms/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package
+    on:
+      branch: release/cms
+  - provider: script
+    skip_cleanup: true
+    script: dotnet nuget push Nintek.Cms.AdminPanel/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package
+    on:
+      branch: release/admin-panel
+  - provider: script
+    skip_cleanup: true
+    script: dotnet nuget push Nintek.Cms.AspNetCore/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package
+    on:
+      branch: release/asp-net-core
+  - provider: script
+    skip_cleanup: true
+    script: dotnet nuget push Nintek.Cms.Autofac/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package
+    on:
+      branch: release/autofac
+  - provider: script
+    skip_cleanup: true
+    script: dotnet nuget push Nintek.Cms.Users/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package
+    on:
+      branch: release/users
