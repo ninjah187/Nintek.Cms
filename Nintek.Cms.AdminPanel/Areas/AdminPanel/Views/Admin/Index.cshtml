@@ -1,0 +1,17 @@
+﻿@model IReadOnlyList<ModelMetaViewModel>
+
+<h1>Nintek CMS</h1>
+
+<h2>Models</h2>
+
+<ul>
+    @foreach (var metadata in @Model)
+    {
+    <li>
+        <a asp-area="@nameof(Nintek.Cms.AdminPanel.Areas.AdminPanel)"
+           asp-controller="@nameof(ModelController).Replace("Controller", "")"
+           asp-action="@nameof(ModelController.Index)"
+           asp-route-slug="@metadata.Slug">@metadata.Name</a>, Fields: @metadata.FieldsCount
+    </li>
+    }
+</ul>

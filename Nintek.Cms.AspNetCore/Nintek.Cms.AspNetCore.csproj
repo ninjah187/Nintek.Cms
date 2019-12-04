@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Nintek.Cms.AspNetCore</PackageId>
+    <Version>0.10.0</Version>
+    <Authors>Karol Hinz</Authors>
+    <Description>Simple CMS. ASP.NET Core integrations.</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Nintek.Cms" Version="0.27.0" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet pack --no-build &amp;&amp; nuget add bin\$(ConfigurationName)\$(PackageId).$(Version).nupkg -source C:\dev\nuget" />
+  </Target>
+
+</Project>

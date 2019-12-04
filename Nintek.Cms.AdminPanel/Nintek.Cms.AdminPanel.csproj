@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Nintek.Cms.AdminPanel</PackageId>
+    <Version>0.59.0</Version>
+    <Authors>Karol Hinz</Authors>
+    <Description>Simple CMS. Admin Panel.</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Nintek.Cms.Users" Version="0.28.0" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet pack --no-build &amp;&amp; nuget add bin\$(ConfigurationName)\$(PackageId).$(Version).nupkg -source C:\dev\nuget" />
+  </Target>
+</Project>

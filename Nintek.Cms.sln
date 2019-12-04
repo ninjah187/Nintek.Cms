@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nintek.Cms", "Nintek.Cms\Nintek.Cms.csproj", "{F591B49B-AC1B-4D97-8CE1-21D44F8F405C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nintek.Cms.Example", "Nintek.Cms.Example\Nintek.Cms.Example.csproj", "{40A76CF1-66FC-4B91-A3A0-D19E0C144142}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nintek.Cms.Web", "Nintek.Cms.Web\Nintek.Cms.Web.csproj", "{4F9AD541-7C23-4C57-A6FE-9A48402CEDE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nintek.Cms.AspNetCore", "Nintek.Cms.AspNetCore\Nintek.Cms.AspNetCore.csproj", "{E1F862DD-3D41-4BAD-8343-BDCD42240F06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nintek.Cms.Autofac", "Nintek.Cms.Autofac\Nintek.Cms.Autofac.csproj", "{F89AFE69-FC32-4C4F-A041-B77D940A4FB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nintek.Cms.AdminPanel", "Nintek.Cms.AdminPanel\Nintek.Cms.AdminPanel.csproj", "{429020FE-3430-4DAB-ACCB-3651CBC68BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nintek.Cms.Users", "Nintek.Cms.Users\Nintek.Cms.Users.csproj", "{4B207823-8CDE-4C9D-8839-EDE85500887E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F591B49B-AC1B-4D97-8CE1-21D44F8F405C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F591B49B-AC1B-4D97-8CE1-21D44F8F405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F591B49B-AC1B-4D97-8CE1-21D44F8F405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F591B49B-AC1B-4D97-8CE1-21D44F8F405C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A76CF1-66FC-4B91-A3A0-D19E0C144142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A76CF1-66FC-4B91-A3A0-D19E0C144142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A76CF1-66FC-4B91-A3A0-D19E0C144142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A76CF1-66FC-4B91-A3A0-D19E0C144142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F9AD541-7C23-4C57-A6FE-9A48402CEDE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F9AD541-7C23-4C57-A6FE-9A48402CEDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F9AD541-7C23-4C57-A6FE-9A48402CEDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F9AD541-7C23-4C57-A6FE-9A48402CEDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F862DD-3D41-4BAD-8343-BDCD42240F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F862DD-3D41-4BAD-8343-BDCD42240F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F862DD-3D41-4BAD-8343-BDCD42240F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F862DD-3D41-4BAD-8343-BDCD42240F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89AFE69-FC32-4C4F-A041-B77D940A4FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89AFE69-FC32-4C4F-A041-B77D940A4FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89AFE69-FC32-4C4F-A041-B77D940A4FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89AFE69-FC32-4C4F-A041-B77D940A4FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{429020FE-3430-4DAB-ACCB-3651CBC68BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429020FE-3430-4DAB-ACCB-3651CBC68BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429020FE-3430-4DAB-ACCB-3651CBC68BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429020FE-3430-4DAB-ACCB-3651CBC68BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B207823-8CDE-4C9D-8839-EDE85500887E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B207823-8CDE-4C9D-8839-EDE85500887E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B207823-8CDE-4C9D-8839-EDE85500887E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B207823-8CDE-4C9D-8839-EDE85500887E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2744E4EC-BD09-4AC1-8BF8-D83330AA835B}
+	EndGlobalSection
+EndGlobal

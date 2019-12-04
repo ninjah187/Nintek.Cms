@@ -1,0 +1,13 @@
+﻿@model LoginViewModel
+
+<form asp-controller="@nameof(UsersController)" asp-action="@nameof(UsersController.Login)">
+    <label for="email">Name</label>
+    <input id="email" type="text" name="email" />
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" />
+    <button type="submit">Login</button>
+    @if (Model.LoginError)
+    {
+        <p>Login error.</p>
+    }
+</form>

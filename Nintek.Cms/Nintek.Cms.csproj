@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Nintek.Cms</PackageId>
+    <Version>0.27.0</Version>
+    <Authors>Karol Hinz</Authors>
+    <Description>Simple CMS.</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="Marten" Version="3.9.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet pack --no-build &amp;&amp; nuget add bin\$(ConfigurationName)\$(PackageId).$(Version).nupkg -source C:\dev\nuget" />
+  </Target>
+
+</Project>

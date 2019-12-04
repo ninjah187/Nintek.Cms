@@ -1,0 +1,14 @@
+﻿@model Nintek.Cms.Web.Models.Product[]
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Produkty</h1>
+
+@foreach (var product in Model)
+{
+    <h2>@product.Title</h2>
+    <p>@product.Description</p>
+    <p>@product.Price</p>
+}

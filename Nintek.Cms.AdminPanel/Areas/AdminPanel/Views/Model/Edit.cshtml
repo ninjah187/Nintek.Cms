@@ -1,0 +1,44 @@
+﻿@model ModelEditVm
+
+<h2>@Model.Meta.GetShortName() <small>(@Model.Meta.FullName)</small></h2>
+
+<h3>Fields:</h3>
+<ul>
+    @foreach (var field in @Model.Meta.Fields)
+    {
+        <li>
+            @field.Name <small>(@field.Type)</small>
+        </li>
+    }
+</ul>
+
+<form asp-controller="@nameof(ModelController).Replace("Controller", "")"
+      asp-action="@nameof(ModelController.Edit)"
+      asp-route-slug="@Model.Meta.Slug">
+    @foreach (var (key, value) in Model.Model.Entries())
+    {
+    <div>
+        <div>
+            <label for="@key-field">@key</label>
+        </div>
+        @if (key == nameof(Nintek.Cms.Model.Id))
+        {
+            if (value == default)
+            {
+                <span>new</span>
+            }
+            else
+            {
+                <span>@value</span>
+            }
+        }
+        else
+        {
+        <div>
+            <input id="@key-field" name="model[@key]" value="@value" />
+        </div>
+        }
+    </div>
+    }
+    <button type="submit">Save</button>
+</form>

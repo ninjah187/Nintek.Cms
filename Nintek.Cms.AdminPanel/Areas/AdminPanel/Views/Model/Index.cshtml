@@ -1,0 +1,46 @@
+﻿@model ModelListVm
+
+<h2>@Model.Meta.GetShortName() <small>(@Model.Meta.FullName)</small></h2>
+
+<h3>Fields:</h3>
+<ul>
+    @foreach (var field in @Model.Meta.Fields)
+    {
+        <li>
+            @field.Name <small>(@field.Type)</small>
+        </li>
+    }
+</ul>
+
+<a asp-controller="@nameof(ModelController).Replace("Controller", "")"
+   asp-action="@nameof(ModelController.Edit)"
+   asp-route-slug="@Model.Meta.Slug"
+   asp-route-id="new">Create new</a>
+
+<table class="nintek-admin-table">
+    <thead>
+        <tr>
+            @foreach (var key in Model.Keys)
+            {
+                <td>@key</td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Models)
+        {
+            <tr>
+                @foreach (var (key, value) in item.Entries)
+                {
+                    <td>@value</td>
+                }
+                <td>
+                    <a asp-controller="@nameof(ModelController).Replace("Controller", "")"
+                       asp-action="@nameof(ModelController.Edit)"
+                       asp-route-slug="@Model.Meta.Slug"
+                       asp-route-id="@item.Model.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
