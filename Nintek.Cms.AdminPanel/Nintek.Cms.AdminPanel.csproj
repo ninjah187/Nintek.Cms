@@ -13,8 +13,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Nintek.Cms.Users" Version="0.28.0" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet pack --no-build &amp;&amp; nuget add bin\$(ConfigurationName)\$(PackageId).$(Version).nupkg -source C:\dev\nuget" />
-  </Target>
 </Project>
