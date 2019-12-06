@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Nintek.Cms</PackageId>
+    <LangVersion>latest</LangVersion>
     <Version>0.27.0</Version>
     <Authors>Karol Hinz</Authors>
     <Description>Simple CMS.</Description>
