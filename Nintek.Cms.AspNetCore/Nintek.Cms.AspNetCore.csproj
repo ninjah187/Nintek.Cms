@@ -15,8 +15,4 @@
     <PackageReference Include="Nintek.Cms" Version="0.27.0" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet pack --no-build &amp;&amp; nuget add bin\$(ConfigurationName)\$(PackageId).$(Version).nupkg -source C:\dev\nuget" />
-  </Target>
-
 </Project>
